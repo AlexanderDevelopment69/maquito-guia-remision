@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maquitop</string>
+    <string name="nueva_guia">Nueva Guía</string>
+    <string name="historial">Historial</string>
+    <string name="configuracion">Configuración</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="generar_pdf">Generar PDF</string>
+    <string name="cliente_nombre_hint">Nombre / Razón Social</string>
+    <string name="cliente_telefono_hint">Teléfono</string>
+    <string name="cliente_direccion_hint">Dirección</string>
+</resources>

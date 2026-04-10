@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- El contenedor total para iconos de Splash Screen es de 288dp x 288dp -->
+    <!-- El área visible "segura" es un círculo de 160dp -->
+    <item
+        android:drawable="@drawable/logo"
+        android:gravity="center"
+        android:width="120dp"
+        android:height="120dp" />
+</layer-list>

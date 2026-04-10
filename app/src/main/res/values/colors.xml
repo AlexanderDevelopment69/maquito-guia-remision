@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azul_primario">#2873B0</color>
+    <color name="azul_claro">#4A92D0</color>
+    <color name="azul_oscuro_marca">#1A5280</color>
+    <color name="naranja_primario">#2873B0</color>
+    <color name="naranja_claro">#4A92D0</color>
+    <color name="naranja_oscuro">#1A5280</color>
+    <color name="azul_oscuro">#1E1E50</color>
+    <color name="azul_medio">#2D3A7A</color>
+    <color name="fondo_principal">#F5F5F5</color>
+    <color name="fondo_card">#FFFFFF</color>
+    <color name="texto_principal">#212121</color>
+    <color name="texto_secundario">#757575</color>
+    <color name="verde_bueno">#00AA44</color>
+    <color name="amarillo_regular">#CC8800</color>
+    <color name="rojo_malo">#CC0000</color>
+    <color name="gris_borde">#E0E0E0</color>
+
+    <!-- Material color aliases -->
+    <color name="colorPrimary">@color/naranja_primario</color>
+    <color name="colorPrimaryVariant">@color/naranja_oscuro</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">@color/azul_oscuro</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">@color/texto_principal</color>
+    <color name="colorError">#B00020</color>
+</resources>

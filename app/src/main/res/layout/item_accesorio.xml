@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvAccesorioNombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/texto_principal" />
+
+            <ImageButton
+                android:id="@+id/btnEliminarAccesorio"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="#CC0000"
+                android:contentDescription="Eliminar" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rgEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <RadioButton
+                android:id="@+id/rbBueno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bueno"
+                android:textSize="12sp"
+                android:textColor="#00AA44"
+                android:buttonTint="#00AA44" />
+
+            <RadioButton
+                android:id="@+id/rbRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Regular"
+                android:textSize="12sp"
+                android:textColor="#CC8800"
+                android:buttonTint="#CC8800" />
+
+            <RadioButton
+                android:id="@+id/rbMalo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Malo"
+                android:textSize="12sp"
+                android:textColor="#CC0000"
+                android:buttonTint="#CC0000" />
+        </RadioGroup>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

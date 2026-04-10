@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_principal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/azul_primario"
+            app:titleTextColor="@android:color/white"
+            app:navigationIconTint="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header de guía -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@color/azul_primario">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvNumeroGuia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white" />
+                        <TextView
+                            android:id="@+id/tvFecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="#CCFFFFFF"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Helper macro para sección -->
+            <include
+                android:id="@+id/layoutCliente"
+                layout="@layout/include_detalle_seccion_cliente" />
+
+            <!-- Quien entrega el equipo -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="QUIEN ENTREGA EL EQUIPO" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp" android:layout_marginTop="8dp"/>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="8dp"
+                app:cardElevation="2dp" android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <TextView android:id="@+id/tvQuienEntregaNombre" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="14sp"
+                        android:textStyle="bold" android:textColor="@color/texto_principal" />
+                    <TextView android:id="@+id/tvQuienEntregaDni" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"
+                        android:textColor="@color/texto_secundario" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <include
+                android:id="@+id/layoutEquipo"
+                layout="@layout/include_detalle_seccion_equipo" />
+
+            <!-- Accesorios -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="ACCESORIOS" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp" android:layout_marginTop="8dp"/>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="8dp"
+                app:cardElevation="2dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/tvAccesorios" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:padding="16dp"
+                    android:textSize="13sp" android:textColor="@color/texto_principal"
+                    android:lineSpacingExtra="4dp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Comentarios -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="OBSERVACIONES" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp"/>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="8dp"
+                app:cardElevation="2dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/tvComentarios" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:padding="16dp"
+                    android:textSize="13sp" android:textColor="@color/texto_principal" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Fotos -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="FOTOGRAFÍAS" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="6dp">
+                <ImageView android:id="@+id/imgFoto1" android:layout_width="0dp"
+                    android:layout_height="150dp" android:layout_weight="1"
+                    android:scaleType="centerCrop" android:visibility="gone"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_image_placeholder" />
+                <ImageView android:id="@+id/imgFoto2" android:layout_width="0dp"
+                    android:layout_height="150dp" android:layout_weight="1"
+                    android:scaleType="centerCrop" android:visibility="gone"
+                    android:background="@drawable/bg_image_placeholder" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="12dp">
+                <ImageView android:id="@+id/imgFoto3" android:layout_width="0dp"
+                    android:layout_height="150dp" android:layout_weight="1"
+                    android:scaleType="centerCrop" android:visibility="gone"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_image_placeholder" />
+                <ImageView android:id="@+id/imgFoto4" android:layout_width="0dp"
+                    android:layout_height="150dp" android:layout_weight="1"
+                    android:scaleType="centerCrop" android:visibility="gone"
+                    android:background="@drawable/bg_image_placeholder" />
+            </LinearLayout>
+
+            <!-- Firma cliente -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="FIRMA DEL CLIENTE" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp"/>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="8dp"
+                app:cardElevation="2dp" android:layout_marginBottom="24dp">
+                <ImageView android:id="@+id/imgFirmaCliente" android:layout_width="match_parent"
+                    android:layout_height="120dp" android:scaleType="fitCenter"
+                    android:visibility="gone" android:padding="8dp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botones -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReexportarPdf"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="📄  REEXPORTAR PDF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/azul_primario"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEliminarGuia"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🗑  ELIMINAR GUÍA"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#CC0000"
+                android:textColor="#CC0000"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

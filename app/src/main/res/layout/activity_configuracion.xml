@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_principal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/naranja_primario"
+            app:titleTextColor="@android:color/white"
+            app:navigationIconTint="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Datos de empresa -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="DATOS DE LA EMPRESA" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="8dp"
+                app:cardElevation="2dp" android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="Nombre de empresa" android:layout_marginBottom="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmpresaNombre" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="textCapWords"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="RUC" android:layout_marginBottom="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmpresaRuc" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="Dirección" android:layout_marginBottom="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmpresaDireccion" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="textMultiLine"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="Teléfono" android:layout_marginBottom="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmpresaTelefono" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="phone"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="Correo electrónico"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmpresaEmail" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Logo de empresa -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="LOGO DE LA EMPRESA" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="8dp"
+                app:cardElevation="2dp" android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp" android:gravity="center">
+
+                    <ImageView android:id="@+id/imgLogo" android:layout_width="160dp"
+                        android:layout_height="80dp" android:scaleType="fitCenter"
+                        android:visibility="gone" android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_image_placeholder"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSeleccionarLogo" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Seleccionar Logo" app:backgroundTint="@color/naranja_primario"
+                            android:layout_marginEnd="8dp"/>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEliminarLogo" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Quitar"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            app:strokeColor="#CC0000" android:textColor="#CC0000"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Firma del jefe -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="FIRMA DEL RESPONSABLE" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="8dp"
+                app:cardElevation="2dp" android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp" android:gravity="center">
+
+                    <ImageView android:id="@+id/imgFirmaJefe" android:layout_width="match_parent"
+                        android:layout_height="100dp" android:scaleType="fitCenter"
+                        android:visibility="gone" android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_firma_canvas"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnDibujarFirmaJefe" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="✏ Dibujar" app:backgroundTint="@color/azul_oscuro"
+                            android:padding="0dp"
+                            android:layout_marginEnd="4dp"/>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSeleccionarFirmaJefe" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="📁 Imagen" app:backgroundTint="@color/naranja_primario"
+                            android:padding="0dp"
+                            android:layout_marginEnd="4dp"/>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEliminarFirmaJefe" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="0.4"
+                            android:text="✗"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            app:strokeColor="#CC0000" android:textColor="#CC0000"
+                            android:padding="0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Numeración -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="CONFIGURACIÓN DE NUMERACIÓN" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="@android:color/white" android:background="@color/azul_oscuro"
+                android:padding="10dp" android:layout_marginBottom="4dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="8dp"
+                app:cardElevation="2dp" android:layout_marginBottom="24dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+
+                    <TextView android:id="@+id/tvContadorActual" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Contador actual: 1"
+                        android:textSize="14sp" android:textStyle="bold"
+                        android:textColor="@color/naranja_primario" android:layout_marginBottom="12dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="Número de inicio" android:layout_marginBottom="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNumeroInicio" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"
+                            android:text="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnResetearNumeracion" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Resetear Numeración"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:strokeColor="@color/naranja_primario"
+                        android:textColor="@color/naranja_primario"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuardarConfig" android:layout_width="match_parent"
+                android:layout_height="56dp" android:text="💾  GUARDAR CONFIGURACIÓN"
+                android:textSize="15sp" android:textStyle="bold"
+                app:backgroundTint="@color/naranja_primario"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
